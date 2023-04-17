@@ -50,7 +50,7 @@ func HttpCaller(w http.ResponseWriter, r *http.Request) {
 	// Parse the request body into a PasswordRequest struct
 	mydata, err := getMyFunction("name", "test")
 	if err != nil {
-		http.Error(w, "Cannot decode PSK", http.StatusInternalServerError)
+		http.Error(w, "Cannot decode test", http.StatusInternalServerError)
 		return
 	}
 	log.Infof("Got data back %v", mydata)
